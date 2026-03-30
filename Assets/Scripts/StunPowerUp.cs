@@ -8,10 +8,8 @@ public class StuntPowerUp : MonoBehaviour
     {
         if (other.CompareTag("StunPowerUp"))
         {
-            // ?? Enemy ????????? Tag
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
-            // ????????????????? 5 ??
             foreach (GameObject enemyObj in enemies)
             {
                 Enemy enemyScript = enemyObj.GetComponent<Enemy>();
@@ -21,8 +19,6 @@ public class StuntPowerUp : MonoBehaviour
                     enemyScript.StunEnemy(stunDuration);
                 }
             }
-
-            // ?? PowerUp ????????
             Destroy(other.gameObject);
         }
     }

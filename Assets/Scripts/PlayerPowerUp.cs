@@ -8,6 +8,7 @@ public class PlayerPowerUp : MonoBehaviour
 
     private bool hasPowerUp = false;
 
+
     void Start()
     {
         if (powerIndicator != null)
